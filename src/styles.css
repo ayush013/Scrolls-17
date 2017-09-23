@@ -9,6 +9,15 @@ body {
 
 /* MODAL */
 
+#mailusmodal .modal-content {
+  background: linear-gradient(135deg, rgba(0,159,183,1) 0%, rgba(254,216,102,1) 100%);
+  font-family: 'Josefin Sans';
+  font-weight: 400;
+  color: white;
+  padding: 5%;
+  border-radius: 15px;
+}
+
 #loginmodal #modalform {
       padding: 8% 5%;
 }
