@@ -30,7 +30,7 @@ export class DashboardComponent implements OnInit {
     }
 
 
-	  this.dropzoneurl = "http://akgec-scrolls.com/test/api/public/api/fileentry/add?token="+this.LoginResponse.token;
+	  this.dropzoneurl = "http://akgec-scrolls.com/api/public/api/fileentry/add?token="+this.LoginResponse.token;
 
 	this.serverService.SynopsisAlready(this.LoginResponse.token)
 	 .subscribe(

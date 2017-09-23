@@ -12,7 +12,7 @@ export class ServerService {
   LoginResponse: {token: string, teamname: string, member1name: string, member2name: string, member3name: string };
 
 
-  apiurl = 'http://akgec-scrolls.com/test/api/public/api/';
+  apiurl = 'http://akgec-scrolls.com/api/public/api/';
 
   constructor(private http: Http, private storage:LocalStorageService) {}
 
