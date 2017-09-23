@@ -1,0 +1,293 @@
+<script type="text/javascript" src="./assets/jquery-3.2.1.min.js"></script>
+
+
+<!-- LANDING SECTION -->
+<div id="home" class="container reveal1" [ngsRevealSet]="{ reset:true}" [ngsInterval]="50" [ngsSelector]="'.reveal1'">
+  <div class="row">
+    <div class="col-sm-6 col-xs-12" id="svgdiv">
+      <img src="./../assets/landingbg.svg" class="img-responsive" id="landingbg">
+      <img src="./../assets/landingbulb.svg" class="img-responsive" id="landingbulb">
+    </div>
+    <div class="col-sm-6 col-xs-12">
+      <div id="parallaxlanding" data-scalar-x="5" data-scalar-y="10">
+        <div data-depth="0.40" class="layer"><div id="landingdummybg"></div></div>
+        <div data-depth="0.70" class="layer"><span id="landingdummy">S</span></div>
+        <div data-depth="0.60" class="layer"><img src="./../assets/memphis1.svg" class="img-responsive" id="landingmemphis"></div>
+        <div data-depth="0.50" class="layer"><span id="landingcollege">AJAY KUMAR GARG ENGINEERING COLLEGE</span></div>
+        <div data-depth="0.60" class="layer"><span id="landingheading" class="glitch" data-text="SCROLLS">SCROLLS</span></div>
+        <div data-depth="0.50" class="layer"><span id="landingheading2">2017</span></div>
+        <div data-depth="0.70" class="layer"><span id="landinggma">in association with <img src="./../assets/gma.png" class=" gmalogo"></span></div>
+        <div data-depth="0.30" class="layer"><img src="./../assets/memphis2.svg" class="img-responsive" id="landingmemphis2"></div>
+        <div data-depth="0.20" class="layer"><img src="./../assets/memphis3.svg" class="img-responsive" id="landingmemphis3"></div>
+      </div>
+              <a class="btn btn-default reveal1" data-toggle="modal" data-target="#registermodal" id="landingbtn" role="button"><span class="glyphicon glyphicon-menu-right"aria-hidden="true"></span>REGISTER</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ABOUT SECTION -->
+<div id="about" class="container reveal2" [ngsRevealSet]="{ reset:true}" [ngsInterval]="50" [ngsSelector]="'.reveal2'">
+
+<div id="abouttitle">
+        <img src="../assets/aboutbulb1.svg" class="img-responsive" id="aboutbulb">
+
+  <div id="parallaxabout" data-scalar-x="1" data-scalar-y="10">
+        <div data-depth="0.40" class="layer"><div id="aboutdummybg"></div></div>
+        <div data-depth="0.80" class="layer"><span id="aboutdummy">A</span></div>
+        <div data-depth="0.60" class="layer"><img src="./../assets/memphis1.svg" class="img-responsive" id="aboutmemphis"></div>
+        <div data-depth="0.60" class="layer"><span id="aboutheading" class="glitch" data-text="ABOUT SCROLLS">ABOUT SCROLLS</span></div>
+        <div data-depth="0.20" class="layer"><img src="./../assets/memphis3.svg" class="img-responsive" id="aboutmemphis2"></div>
+  </div>
+</div>
+
+<div class="row reveal2" >
+  <div class="col-md-5 col-xs-12 reveal2">
+    <div id="quotediv">
+      <span id="quote" class="text-center">"<span class="yellow">LOGIC</span> CAN TAKE YOU FROM A TO B BUT <span class="yellow">IMAGINATION</span> CAN TAKE YOU ANYWHERE!"</span>
+      <hr>
+      <span id="quotecredits" class="text-center">ALBERT EINSTEIN</span>
+    </div>
+  </div>
+  <div class="col-md-7 col-xs-12 reveal2">
+    <div id="detailsdiv">
+      <span id="details" class="text-center">A national level technical paper presentation contest that provides a pedestal to unleash the talent of budding technocrats, SCROLLS-2017 deals with the most thriving and progressive fields of technology and management, bringing Computing, Information Technology, Mechanical Engineering, Electrical Engineering, Electronics and Communication Technologies and Civil Engineering along with major developmental leaps in management and leadership in its fold.The crystal clarity and insight of the unique topics will not only transcend the contestant to glory but will also add to the technological advancement of the era. The share you transcribe to evacuate the sub fuss of unawareness will be in your own hands. Melt the dusk and evolve into the new dawn of prestige with utter confidence and perseverance. 
+      <br>
+      We at AJAY KUMAR GARG ENGINEERING COLLEGE believe in the saying “Every human has four endowments - self awareness, conscience, independent will and creative imagination. These give us the ultimate human freedom.The power to choose, to respond, to change”. One has very rightly said that when the seeds of imagination and innovation are nourished in proper soil with every proper care only then they germinate. If one has to strive for zenith then one must be able to think beyond the conventions, lay firm foots ahead with dedication and will.
+      <br>
+      Thus elevating the zeal of creativity and innovation amongst students, we at AKGEC organize the National-level paper presentation event called SCROLLS(Students creative and Oratory Learning Skills)  which aims at flourishing the talent of students and giving them a platform to showcase their multidimensional creativity. This event is not only for the engineering field but for Management as well.
+</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- TOPIC SECTION -->
+<div id="topic" class="container reveal3" [ngsRevealSet]="{ reset:true}" [ngsInterval]="50" [ngsSelector]="'.reveal3'">
+
+<div id="topictitle">
+  <div id="parallaxtopic" data-scalar-x="1" data-scalar-y="10">
+        <div data-depth="0.40" class="layer"><div id="topicdummybg"></div></div>
+        <div data-depth="0.80" class="layer"><span id="topicdummy">T</span></div>
+        <div data-depth="0.60" class="layer"><img src="./../assets/memphis1.svg" class="img-responsive" id="topicmemphis"></div>
+        <div data-depth="0.60" class="layer"><span id="topicheading" class="glitch" data-text="TOPICS">TOPICS</span></div>
+        <div data-depth="0.20" class="layer"><img src="./../assets/memphis3.svg" class="img-responsive" id="topicmemphis2"></div>
+  </div>
+</div>
+
+<div class="row reveal3">
+  <div class="col-md-6 col-xs-12">
+    <div id="topicselector"> 
+        <a href="#scrolltotopic"><img src="./../assets/topic-cs.svg" class="img-responsive selection" (click)="topicChange(0)" (click)="topicList(0,11)">
+      <img src="./../assets/topic-ec.svg" class="img-responsive selection" (click)="topicChange(1)" (click)="topicList(12,21)">
+      <img src="./../assets/topic-ee.svg" class="img-responsive selection" (click)="topicChange(2)" (click)="topicList(22,32)">
+      <img src="./../assets/topic-me.svg" class="img-responsive selection" (click)="topicChange(3)" (click)="topicList(33,44)">
+      <img src="./../assets/topic-civil.svg" class="img-responsive selection" (click)="topicChange(4)" (click)="topicList(45,56)">
+      <img src="./../assets/topic-mgmt.svg" class="img-responsive selection" (click)="topicChange(5)" (click)="topicList(57,67)"></a>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-xs-12 reveal3" id="scrolltotopic">
+    <div id="topiccontent" >
+        <div id="topicdummybgcontent"></div>
+        <span id="topicdummycontent">{{dummy}}</span>
+        <span id="topicheadingcontent">{{branch}}</span>
+        <span id="topicheadingquote">{{quote}}</span>    
+    </div>
+    <div id="topicsdiv">
+      <span id="topiclist" class="text-center" *ngFor="let topic of list">{{topic}}</span>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- RULES SECTION -->
+<div id="rules" class="container reveal4" [ngsRevealSet]="{ reset:true}" [ngsInterval]="50" [ngsSelector]="'.reveal4'">
+
+<div id="rulestitle">
+  <div id="parallaxrules" data-scalar-x="1" data-scalar-y="10">
+        <div data-depth="0.40" class="layer"><div id="rulesdummybg"></div></div>
+        <div data-depth="0.80" class="layer"><span id="rulesdummy">R</span></div>
+        <div data-depth="0.60" class="layer"><img src="../assets/memphis1.svg" class="img-responsive" id="rulesmemphis"></div>
+        <div data-depth="0.60" class="layer"><span id="rulesheading" class="glitch" data-text="RULES AND REGULATIONS">RULES AND REGULATIONS</span></div>
+        <div data-depth="0.20" class="layer"><img src="../assets/memphis3.svg" class="img-responsive" id="rulesmemphis2"></div>
+  </div>
+</div>
+<div id="rulescontent">
+    <div class="rulewrapper reveal4" *ngFor="let rule of rules">
+      <span class="ruletext">{{rule.ruletext}}</span>
+      <span class="ruleswrapperdummy">{{rule.rulenumber}}</span>
+    </div>
+</div>
+
+</div>
+
+<!-- CONTACT SECTION -->
+<div id="contact" class="container reveal5" [ngsRevealSet]="{ reset:true}" [ngsInterval]="50" [ngsSelector]="'.reveal5'">
+
+<div id="contacttitle">
+  <div id="parallaxcontact" data-scalar-x="1" data-scalar-y="10">
+        <div data-depth="0.40" class="layer"><div id="contactdummybg"></div></div>
+        <div data-depth="0.80" class="layer"><span id="contactdummy">C</span></div>
+        <div data-depth="0.60" class="layer"><img src="./../assets/memphis1.svg" class="img-responsive" id="contactmemphis"></div>
+        <div data-depth="0.60" class="layer"><span id="contactheading" class="glitch" data-text="CONTACT US">CONTACT US</span></div>
+        <div data-depth="0.20" class="layer"><img src="./../assets/memphis3.svg" class="img-responsive" id="contactmemphis2"></div>
+  </div>
+</div>
+
+
+  <div class="row reveal5" id="endingdiv">
+    <div class="col-md-6 col-xs-12 reveal5">
+    <div class="card" id="scrollsteam">
+      <div id="teamcontent">
+          <div id="teamdummybg" style="width: 70%;"></div>
+          <span id="teamdummy">I</span>
+          <span id="teamheading">IMPORTANT DATES</span>
+      </div>
+<ul class="timeline ">
+    <li>
+        <div class="timeline-badge">
+          <span class="glyphicon glyphicon glyphicon-certificate" style="color: black;" aria-hidden="true"></span>
+        </div>
+        <div class="timeline-panel">
+            <div class="timeline-heading">
+                <h4>Last Date for submission of synopsis</h4>
+            </div>
+            <div class="timeline-footer">
+                <p class="text-right">6<sup>th</sup> October, Friday</p>
+            </div>
+        </div>
+    </li>
+    
+    <li class="timeline-inverted">
+        <div class="timeline-badge">
+          <span class="glyphicon glyphicon glyphicon-certificate" style="color: black;" aria-hidden="true"></span>
+        </div>
+        <div class="timeline-panel">
+            <div class="timeline-heading">
+                <h4>Notification of acceptance</h4>
+            </div>
+            <div class="timeline-footer">
+                <p class="text-right">11<sup>th</sup> October, Wednesday</p>
+            </div>
+        </div>
+    </li>
+    
+    <li>
+        <div class="timeline-badge">
+          <span class="glyphicon glyphicon glyphicon-certificate" style="color: black;" aria-hidden="true"></span>
+        </div>
+        <div class="timeline-panel">
+            <div class="timeline-heading">
+                <h4>Submission of final paper</h4>
+            </div>
+            <div class="timeline-footer">
+                <p class="text-right">21<sup>th</sup> October, Saturday</p>
+            </div>
+        </div>
+    </li>
+    <li class="timeline-inverted">
+        <div class="timeline-badge">
+          <span class="glyphicon glyphicon glyphicon-certificate" style="color: black;" aria-hidden="true"></span>
+        </div>
+        <div class="timeline-panel">
+            <div class="timeline-heading">
+                <h4>Main event</h4>
+            </div>
+            <div class="timeline-footer">
+                <p class="text-right">27<sup>th</sup> October, Friday</p>
+            </div>
+        </div>
+    </li>
+    <li class="clearfix no-float"></li>
+</ul>
+
+
+
+    </div>
+  </div>
+    <div class="col-md-6 col-xs-12 reveal5">
+    <div class="card" id="scrollsteam">
+      <div id="teamcontent">
+          <div id="teamdummybg" style="width: 40%;"></div>
+          <span id="teamdummy">R</span>
+          <span id="teamheading">REACH US</span>
+          <a href="mailto:contactus@silive.in" class="btn btn-default reveal5" id="navbtn" style=" position: absolute; right: 5%; top: 17%;"><span class="glyphicon glyphicon-menu-right"aria-hidden="true"></span>CONTACT US</a>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.4669944363836!2d77.49981551457049!3d28.675673982400845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cee2391c13fd1%3A0x5397410d18100e43!2sAjay+Kumar+Garg+Engineering+College!5e0!3m2!1sen!2sin!4v1501609273760" width="100%" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="row reveal6" id="contactcontent" [ngsRevealSet]="{ reset:true}" [ngsInterval]="50" [ngsSelector]="'.reveal6'">
+  <div class="col-md-6 col-xs-12 reveal6">
+    <div class="card" id="scrollsteam">
+      <div id="teamcontent">
+          <div id="teamdummybg"></div>
+          <span id="teamdummy">S</span>
+          <span id="teamheading">SCROLLS TEAM</span>
+      </div>
+      <img src="./../assets/parashar.jpg" class="img-responsive img-circle" id="parashar">
+      <span id="teamdesc" class="text-center">Prof. VK Parashar<br><b>Dean Student Welfare, AKGEC</b></span>
+      <div class="row" style="padding: 0 4% 5% 4%;">
+        <div class="col-xs-4">
+          <img src="./../assets/disha.jpg" class="img-responsive img-circle" id="teammate">
+          <span id="teamdesc" class="text-center">Disha Tripathi<br><b>CONVENOR</b></span>
+        </div>
+        <div class="col-xs-4">
+          <a href="https://www.facebook.com/sidhant.kandpal.77" target="_blank" style="cursor: default;"><img src="./../assets/sidhant.jpg" class="img-responsive img-circle" id="teammate"></a>
+          <span id="teamdesc" class="text-center">Sidhant Kandpal<br><b>CONVENOR</b></span>
+        </div>
+        <div class="col-xs-4">
+          <a href="https://www.facebook.com/pratyush.sharma.1806" target="_blank" style="cursor: default;"><img src="./../assets/pratyush.jpg" class="img-responsive img-circle" id="teammate"></a>
+          <span id="teamdesc" class="text-center">Pratyush Sharma<br><b>CONVENOR</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-xs-12 reveal6">
+      <div class="card" id="scrollsteam">
+        <div id="teamcontent">
+            <div id="teamdummybg" style="width: 90%;"></div>
+            <span id="teamdummy">D</span>
+            <span id="teamheading">DEVELOPER TEAM</span>
+        </div>
+        <div class="row" style="padding: 0 4% 5% 4%;">
+        <div class="col-xs-4">
+          <a href="https://www.facebook.com/mayurpathak52" target="_blank" style="cursor: default;"><img src="./../assets/mayur.jpg" class="img-responsive img-circle" id="teammate"></a>
+          <span id="teamdesc" class="text-center">Mayur Pathak</span>
+        </div>
+        <div class="col-xs-4">
+          <img src="./../assets/kanika.png" class="img-responsive img-circle" id="teammate">
+          <span id="teamdesc" class="text-center">Kanika Singhal</span>
+        </div>
+        <div class="col-xs-4">
+          <img src="./../assets/simran.jpg" class="img-responsive img-circle" id="teammate">
+          <span id="teamdesc" class="text-center">Simranpreet Kaur</span>
+        </div>
+        <div class="col-xs-4 col-xs-offset-2">
+          <a href="https://www.facebook.com/profile.php?id=100010069422149" target="_blank" style="cursor: default;"><img src="./../assets/nakshatra.jpg" class="img-responsive img-circle" id="teammate"></a>
+          <span id="teamdesc" class="text-center">Nakshatra Pradhan</span>
+        </div>
+        <div class="col-xs-4">
+          <a href="https://www.facebook.com/ayush013" target="_blank" style="cursor: default;"><img src="./../assets/ayush.jpg" class="img-responsive img-circle" id="teammate"></a>
+          <span id="teamdesc" class="text-center">Ayush Singh</span>
+        </div>
+      </div>
+      </div>
+  </div>
+  </div>
+
+  <div id="poweredbysi" class="row reveal6">
+  <div class="col-xs-5">
+    <a href="http://silive.in" target="_blank" ><img src="./../assets/SILOGO.svg" class="img-responsive pull-right"></a>
+  </div>
+  <div class="col-xs-7">
+    <a href="http://silive.in" target="_blank" style="color: black;"><h4>POWERED BY</h4>
+    <h3>SOFTWARE INCUBATOR</h3></a>
+  </div>
+  </div>
+</div>
+
+

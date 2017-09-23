@@ -1,0 +1,29 @@
+Angular enabled Registration via API
+Synopsis Angular app
+Meta Open Graph Project
+Mobile First Responsive
+Immersive Landing with Swiss/Memphis Element
+Meta Statusbar on Android and iOS 
+Search Engine Optimization- smallseotools.com
+Fixed Render Blocking - PageSpeed Insights
+meta descriptions to 160 characters
+Google Does not accept meta keywords any more
+Favicon
+Leverage browser caching
+Glitch SCROLLS- https://codepen.io/lbebber/pen/ypgql
+Implement Wow js for element reveals 
+Parallax for elements
+Drop great shadows for elements
+SVG Memphis 
+SVG Idea bulb vector
+New color Accent
+New logo
+rectangles expansion on reveal
+search new js libraries
+css waves at bottom
+
+Inspiration- 
+https://www.anakin.co/
+http://www.saifpartners.com/
+http://lookbook.cruxkitchen.com/
+http://travel.camppacific.com/
