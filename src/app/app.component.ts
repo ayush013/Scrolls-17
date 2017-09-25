@@ -54,7 +54,7 @@ export class AppComponent {
   nextvalid = false;
   i = 0;
 
-  scrollsid : string;
+  teamid = '';
   APIdomains = [];
   APItitles = [];
   SubmitResponse;
@@ -77,7 +77,7 @@ ngOnInit() {
 		'members' : new FormArray([])
 	});
 
- console.log(this.regForm);
+ // console.log(this.regForm);
 
 this.serverService.getDomain()
  .subscribe(
@@ -175,12 +175,12 @@ emailValidator(control: FormControl){
 				{
 						
 						if(res.status == 200 ) {
-						console.log("Available");
+				//		console.log("Available");
 						return null;
 						} 
 						// If request fails, return the response
 						else {
-						console.log("Fail");
+					//	console.log("Fail");
 						this.emailerror= "Email Already Exists!";
 						return { "duplicate": true };
 						}
@@ -210,12 +210,12 @@ studentValidator(control: FormControl){
 				{
 						
 						if(res.status == 200 ) {
-						console.log("Available");
+					//	console.log("Available");
 						return null;
 						} 
 						// If request fails, return the response
 						else {
-						console.log("Fail");
+					//	console.log("Fail");
 						return { "duplicate": true };
 						}
 					
@@ -324,13 +324,13 @@ console.log(JSON.stringify(this.regForm.value));
 
  this.serverService.submitForm(JSON.stringify(this.regForm.value))
   .subscribe(
-    (response) => {console.log(response.json()),
+    (response) => { // console.log(response.json()),
     	this.SubmitResponse = response.json();
     	if (this.SubmitResponse.success == true) {
     		this.regForm.reset();
 		  	this.i = 0;
   			this.showcontrol = [true];
-   			this.scrollsid = response.json().data;
+   			this.teamid = (<string>(response.json().data));
      	jQuery(this.modalcloser.nativeElement).modal('hide'); 
      	jQuery(this.successmodal.nativeElement).modal('show'); 
 
@@ -372,7 +372,7 @@ onLogin(form: NgForm) {
   logOut() {
     this.serverService.logOut(this.LoginResponse.token)
    .subscribe(
-     (response) => {  console.log(response);
+     (response) => { // console.log(response);
           jQuery(this.modalcloser.nativeElement).modal('hide'); 
            this.LoginResponse = null;
            this.router.navigate(['/']);
