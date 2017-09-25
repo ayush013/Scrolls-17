@@ -47,7 +47,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     NgsRevealModule.forRoot(),
     DropzoneModule.forRoot(DROPZONE_CONFIG),
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, {useHash: true})
   ],
   providers: [ServerService, AuthGuard],
   bootstrap: [AppComponent]
