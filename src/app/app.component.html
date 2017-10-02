@@ -115,7 +115,7 @@
                 <div class="form-group" [@visibilityChanged]>
                   <label for="email">Email address:</label>
                   <label class="validations" @load *ngIf="!regForm.controls.members.controls[i].controls.email.valid && regForm.controls.members.controls[i].controls.email.touched">{{ emailerror }}</label>
-                  <input type="email" class="form-control" id="email" required maxlength="40" placeholder="Enter Your Email" email formControlName="email">
+                  <input type="email" class="form-control" id="email" required placeholder="Enter Your Email" email formControlName="email">
                 </div>
                 <div class="form-group" [@visibilityChanged]>
                   <label for="course" >Course:</label>

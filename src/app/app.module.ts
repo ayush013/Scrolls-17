@@ -7,7 +7,7 @@ import { NgsRevealModule } from 'ng-scrollreveal';
 import { DropzoneModule } from 'ngx-dropzone-wrapper';
 import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
 import { RouterModule, Routes } from '@angular/router';
-import {Ng2Webstorage} from 'ngx-webstorage';
+import { Ng2Webstorage } from 'ngx-webstorage';
 
 import { AppComponent } from './app.component';
 import { ServerService } from './server.service';

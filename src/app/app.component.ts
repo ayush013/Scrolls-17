@@ -109,15 +109,10 @@ this.serverService.getDomain()
   	this.i = 0;
   	}
 
-
-  changeCollegeName() {
-
-  }  
-
   getmember(i) {
   	  	 var member = new FormGroup({
 	  	'name' : new FormControl(null),
-  		'email' : new FormControl(null, [Validators.required, Validators.email, this.EmailRedundant.bind(this)], [this.emailValidator.bind(this)]),
+  		'email' : new FormControl(null, [Validators.email, Validators.required, this.emailREGEX.bind(this), this.EmailRedundant.bind(this)], [this.emailValidator.bind(this)]),
   		'course' : new FormControl(null),
   		'year' : new FormControl(null),
   		'college_name' : new FormControl(null),
@@ -128,13 +123,12 @@ this.serverService.getDomain()
   		'teamlead' : new FormControl(0)
   	});
 
-  	 if (this.i==0) {
+  	 if (i==0) {
    			member.controls.teamlead.setValue(1) ;
    		}
 
    	return member;
 
-   		
  }
 
 nextChecker() {
@@ -175,9 +169,10 @@ emailValidator(control: FormControl){
 				{
 						
 						if(res.status == 200 ) {
-				//		console.log("Available");
+				    	console.log("Available");
 						return null;
 						} 
+
 						// If request fails, return the response
 						else {
 					//	console.log("Fail");
@@ -185,11 +180,7 @@ emailValidator(control: FormControl){
 						return { "duplicate": true };
 						}
 
-					
-				},
-			error =>  {		
-			   	console.log(error);
-				}		
+				}
 		);
 
 
@@ -224,13 +215,28 @@ studentValidator(control: FormControl){
 	
 }
 
+emailREGEX(control: FormControl) {
+  var REGEXP = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+
+if (this.i==0) {
+  return null;
+}
+
+  return REGEXP.test(control.value) ? null : {
+    validateemailREGEX: {
+      valid: false
+    }}  
+
+}
+
+
 
 StudentREGEX(control: FormControl) {
   var REGEXP = new RegExp(/^[1][4-7]\d{5}[Dd]{0,1}$/);
 
-if (this.i==0) {
-	return null;
-}
+  if (this.i==0) {
+  	return null;
+  }
 
 	if (control.parent.get('college_name').value == 'akg') {
   return REGEXP.test(control.value) ? null : {
@@ -384,6 +390,7 @@ onLogin(form: NgForm) {
      jQuery(this.modalcloser.nativeElement).modal('hide'); 
      jQuery(this.errormodal.nativeElement).modal('show'); 
          this.errormsg = (error.json().error);
+           this.router.navigate(['/']);
     }
    );
   }
